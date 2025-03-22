@@ -185,7 +185,7 @@ main {
 }
 
 /* MEDIA QUERY FOR SMALLER SCREENS */
-@media (max-width: 600px) {
+@media (max-width: 430px) {
   main {
     max-width: 100%; /* Ensure main does not exceed screen width */
     width: 90%;
