@@ -184,42 +184,49 @@ main {
   display: none;
 }
 
-/* MEDIA QUERY FOR SMALLER SCREENS */
-@media (min-width: 430px) {
+/* Styles for iPhone 13 Pro Max and all smaller phones */
+@media (max-width: 430px) {
   main {
-    max-width: 100%; /* Ensure main does not exceed screen width */
-    width: 90%;
-    height: fit-content;
-    padding: 1rem;
+    width: 95%;
+    height: auto; /* Allow flexible height */
+    padding: 2rem;
+    flex-direction: column; /* Stack players vertically */
+    box-shadow: none; /* Remove heavy shadow for better mobile look */
+  }
+
+  .player {
+    padding: 2rem;
+    width: 100%;
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 3rem;
+    text-align: center;
   }
 
   .score {
-    font-size: 2rem;
+    font-size: 4rem;
+    text-align: center;
   }
 
   .current {
     padding: 1.5rem;
+    width: 90%;
   }
 
   .btn {
-    font-size: 1.5rem;
-    padding: 2.5rem 0.5rem;
+    font-size: 1.6rem;
+    padding: 1rem 2.5rem;
+    position: static; /* Allow buttons to flow naturally */
+    width: 90%;
+    margin: 1rem auto; /* Center buttons */
+    display: block; /* Ensure full width usage */
   }
 
   .dice {
-    height: 8rem;
-  }
-
-  /* Additional styles for better accessibility on mobile */
-  body {
-    padding: 1rem; /* Add padding to body for better spacing */
-  }
-
-  .player {
-    padding: 3rem; /* Adjust padding for player sections */
+    height: 6rem;
+    top: auto; /* Adjust for mobile layout */
+    position: relative;
+    margin: 2rem auto;
   }
 }
