@@ -39,8 +39,7 @@ main {
 .player {
   flex: 50%;
   padding: 9rem;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
   align-items: center;
   transition: all .9s;
 }
@@ -80,6 +79,8 @@ main {
 .current {
   background-color: #c7365f;
   opacity: 0.8;
+  margin-top: 25%;
+  margin-left: 15%;
   border-radius: 15px;
   color: #fff;
   width: 65%;
