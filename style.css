@@ -183,3 +183,53 @@ main {
 .hidden {
   display: none;
 }
+
+@media (max-width: 430px) {
+  main {
+    width: 95%;
+    height: auto; /* Adapt to content */
+    padding: 2rem;
+    flex-direction: column; /* Stack players vertically */
+    align-items: center; /* Center content */
+    box-shadow: none; /* Remove heavy shadow for a clean mobile look */
+  }
+
+  .player {
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .score {
+    font-size: 4rem;
+  }
+
+  .current {
+    padding: 1.5rem;
+    width: 80%;
+  }
+
+  /* Center the buttons */
+  .btn {
+    font-size: 1.6rem;
+    padding: 1rem 2.5rem;
+    width: 90%;
+    margin: 1rem auto; /* Centered buttons with spacing */
+    display: block; /* Ensure full width usage */
+    text-align: center;
+    position: static; /* Allow natural stacking */
+  }
+
+  /* Keep the dice centered at its position */
+  .dice {
+    height: 6rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10rem; /* Adjust based on layout */
+  }
+}
