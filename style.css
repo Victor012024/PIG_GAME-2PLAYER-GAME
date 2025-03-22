@@ -34,7 +34,6 @@ main {
   border-radius: 19px;
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Change to column layout */
 }
 
 .player {
@@ -102,9 +101,9 @@ main {
 
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
-  position: relative; /* Change to relative positioning */
-  margin: 1rem 0; /* Add margin for spacing */
-  align-self: center; /* Center the buttons */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   color: #444;
   background: transparent;
   border: none;
@@ -148,9 +147,10 @@ main {
 }
 
 .dice {
-  position: relative; /* Change to relative positioning */
-  margin: 2rem 0; /* Add margin for spacing */
-  align-self: center; /* Center the dice */
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -187,11 +187,12 @@ main {
 /* MEDIA QUERY FOR SMALLER SCREENS */
 @media (max-width: 600px) {
   main {
-    flex-direction: column; /* Ensure column layout on small screens */
     max-width: 100%; /* Ensure main does not exceed screen width */
     width: 90%;
     height: auto;
     padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Ensure column layout on small screens */
   }
 
   .name {
@@ -212,7 +213,7 @@ main {
   }
 
   .dice {
-    height: 7rem;
+    height: 12rem;
   }
 
   /* Additional styles for better accessibility on mobile */
@@ -221,6 +222,6 @@ main {
   }
 
   .player {
-    padding: 5rem; /* Adjust padding for player sections */
+    padding: 5rem;
   }
 }
