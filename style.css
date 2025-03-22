@@ -185,20 +185,20 @@ main {
 }
 
 /* MEDIA QUERY FOR SMALLER SCREENS */
-@media (max-width: 430px) {
+@media (min-width: 430px) {
   main {
     max-width: 100%; /* Ensure main does not exceed screen width */
     width: 90%;
-    height: auto;
-    padding: 2rem;
+    height: fit-content;
+    padding: 1rem;
   }
 
   .name {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .score {
-    font-size: 5rem;
+    font-size: 2rem;
   }
 
   .current {
@@ -207,11 +207,11 @@ main {
 
   .btn {
     font-size: 1.5rem;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0.5rem;
   }
 
   .dice {
-    height: 7rem;
+    height: 8rem;
   }
 
   /* Additional styles for better accessibility on mobile */
@@ -220,6 +220,6 @@ main {
   }
 
   .player {
-    padding: 5rem; /* Adjust padding for player sections */
+    padding: 3rem; /* Adjust padding for player sections */
   }
 }
