@@ -34,6 +34,7 @@ main {
   border-radius: 19px;
   overflow: hidden;
   display: flex;
+  flex-direction: column; /* Change to column layout */
 }
 
 .player {
@@ -101,9 +102,9 @@ main {
 
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative; /* Change to relative positioning */
+  margin: 1rem 0; /* Add margin for spacing */
+  align-self: center; /* Center the buttons */
   color: #444;
   background: transparent;
   border: none;
@@ -147,10 +148,9 @@ main {
 }
 
 .dice {
-  position: absolute;
-  left: 50%;
-  top: 16.5rem;
-  transform: translateX(-50%);
+  position: relative; /* Change to relative positioning */
+  margin: 2rem 0; /* Add margin for spacing */
+  align-self: center; /* Center the dice */
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -184,20 +184,14 @@ main {
   display: none;
 }
 
-@media (max-width: 430px) {
+/* MEDIA QUERY FOR SMALLER SCREENS */
+@media (max-width: 600px) {
   main {
-    width: 95%;
-    height: auto; /* Adapt to content */
+    flex-direction: column; /* Ensure column layout on small screens */
+    max-width: 100%; /* Ensure main does not exceed screen width */
+    width: 90%;
+    height: auto;
     padding: 2rem;
-    flex-direction: column; /* Stack players vertically */
-    align-items: center; /* Center content */
-    box-shadow: none; /* Remove heavy shadow for a clean mobile look */
-  }
-
-  .player {
-    padding: 2rem;
-    width: 100%;
-    text-align: center;
   }
 
   .name {
@@ -205,32 +199,28 @@ main {
   }
 
   .score {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .current {
     padding: 1.5rem;
-    width: 80%;
   }
 
-  /* Center the buttons */
   .btn {
-    font-size: 1.6rem;
-    padding: 1rem 6.5rem;
-    width: 90%;
-    margin: 1rem auto; /* Centered buttons with spacing */
-    display: block; /* Ensure full width usage */
-    text-align: center;
-    position: static; /* Allow natural stacking */
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
   }
 
-  /* Keep the dice centered at its position */
   .dice {
-    height: 6rem;
-    position: absolute;
-    margin-right: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10rem; /* Adjust based on layout */
+    height: 7rem;
+  }
+
+  /* Additional styles for better accessibility on mobile */
+  body {
+    padding: 1rem; /* Add padding to body for better spacing */
+  }
+
+  .player {
+    padding: 5rem; /* Adjust padding for player sections */
   }
 }
