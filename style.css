@@ -216,7 +216,7 @@ main {
   /* Center the buttons */
   .btn {
     font-size: 1.6rem;
-    padding: 1rem 2.5rem;
+    padding: 1rem 6.5rem;
     width: 90%;
     margin: 1rem auto; /* Centered buttons with spacing */
     display: block; /* Ensure full width usage */
@@ -228,6 +228,7 @@ main {
   .dice {
     height: 6rem;
     position: absolute;
+    margin-right: 20%;
     left: 50%;
     transform: translateX(-50%);
     bottom: 10rem; /* Adjust based on layout */
